@@ -26,5 +26,6 @@ class="btn btn-primary"
     <p>No server was created</p>
 </ng-template> -->
 
-<app-server></app-server>
-<app-server></app-server>
+<p *ngIf="serverCreated">Server was created, server name is {{ serverName }}</p>
+
+<app-server *ngFor="let server of servers"></app-server>
